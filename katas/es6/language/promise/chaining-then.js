@@ -21,8 +21,8 @@ describe('chaining multiple promises can enhance readability', () => {
     it('`then()` receives the result of the promise it was called on', function() {
       const wordsPromise = Promise.resolve('one   space     between each     word');
       return wordsPromise
-        // .then(string => removeMultipleSpaces())
-        .then(string => removeMultipleSpaces(string))
+        //// .then(string => removeMultipleSpaces(string))
+        .then(string => removeMultipleSpaces())
         .then(actual => {assert.equal(actual, 'one space between each word')})
       ;
     });
